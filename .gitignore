@@ -1,6 +1,9 @@
 # build
 dist/
 
+# package temp
+package-lock.json
+
 # Logs
 logs
 *.log
