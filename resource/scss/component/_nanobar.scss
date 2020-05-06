@@ -1,0 +1,19 @@
+.nanobar {
+   width: 100%;
+   height: rem(2);
+   z-index: 9999;
+   top: 0;
+}
+
+.nanobar .bar {
+   width: 0;
+   height: 100%;
+   transition: height 0.3s;
+}
+
+.nanobar .bar {
+   background-color: map-get($theme, nanobar-bg);
+   background: #38f;
+   border-radius: 4px;
+   box-shadow: 0 0 10px #59d;
+}
