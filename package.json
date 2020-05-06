@@ -1,0 +1,29 @@
+{
+   "name": "icelus-ui",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "build-css": "npm run css",
+      "build-js": "npm run js",
+      "css": "sass --watch resource/scss:../icelus-content/public/resources/static/_plugin/icelus-ui/css --no-source-map",
+      "js": "webpack"
+   },
+   "author": "Bruno Silva",
+   "license": "MIT",
+   "devDependencies": {
+      "expose-loader": "^0.7.5",
+      "imports-loader": "^0.8.0",
+      "terser-webpack-plugin": "^3.0.0",
+      "webpack": "^4.43.0",
+      "webpack-cli": "^3.3.11"
+   },
+   "dependencies": {
+      "bootstrap": "^4.4.1",
+      "font-awesome": "^4.7.0",
+      "jquery": "^3.5.0",
+      "jquery-validation": "^1.19.1",
+      "nanobar": "^0.4.2",
+      "popper.js": "^1.16.1"
+   }
+}
