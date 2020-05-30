@@ -24,7 +24,8 @@ $.NavBar = function (el, options) {
          const listHidden = '.list-hidden';
 
          // toggle sidebar menu
-         $('#sidebar-toggle').on('click', function () {
+         $('#sidebar-toggle').on('click', function (evt) {
+            evt.preventDefault();
             $('#wrapper').toggleClass('sidebar-toggle');
          });
 

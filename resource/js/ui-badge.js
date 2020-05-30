@@ -1,7 +1,3 @@
-/**
- * Badge
- */
-
 $.Badge = function (el, options) {
    var plugin = this;
 

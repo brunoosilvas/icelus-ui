@@ -1,7 +1,3 @@
-/**
- * InputGroup
- */
-
 $.InputGroup = function (el, options) {
    var plugin = this;
 

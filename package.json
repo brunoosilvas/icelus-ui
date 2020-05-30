@@ -2,11 +2,10 @@
    "name": "icelus-ui",
    "version": "1.0.0",
    "description": "",
-   "main": "index.js",
    "scripts": {
       "build-css": "npm run css",
       "build-js": "npm run js",
-      "css": "sass --watch resource/scss:../icelus-content/public/resources/static/_plugin/icelus-ui/css --no-source-map",
+      "css": "sass --watch resource/scss:../icelus-content/public/resource/static/_plugin/icelus-ui/css --no-source-map",
       "js": "webpack"
    },
    "author": "Bruno Silva",

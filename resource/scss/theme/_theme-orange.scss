@@ -1,0 +1,20 @@
+
+$color: #e87e04;
+
+$theme: (
+   "body-bg": lighten($color, 4.5),
+   "body-color": lighten($color, 65),
+   "sidebar-bg": lighten($color, 0),
+   "list-color": lighten($color, 35),
+   "list-link": lighten($color, 65),
+   "list-border": lighten($color, 6),
+   "list-link-bg": lighten($color, 4.5),
+   "content-bg": #fcfcfc,
+   "navbar-link": lighten($color, 65),
+   "scrollbar-bg": lighten($color, 10),
+   "nanobar-bg": lighten($color, 75),
+   "dropdown-link": lighten($color, 65),
+   "dropdown-bg": lighten($color, 4.5),
+   "dropdown-item-bg": lighten($color, 0),
+   "botbar-bg": lighten($color, 0),
+);

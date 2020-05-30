@@ -1,7 +1,3 @@
-/**
- * plugin Select
- */
-
 $.Select = function (el, options) {
    var plugin = this;
 

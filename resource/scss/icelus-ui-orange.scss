@@ -1,0 +1,10 @@
+$primary: #e87e04;
+
+@import 'bootstrap/scss/bootstrap';
+
+@import 'functions';
+@import 'variables';
+
+@import 'theme/theme-orange';
+@import 'layout/layout';
+@import 'component/component';

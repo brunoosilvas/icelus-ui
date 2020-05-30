@@ -9,14 +9,17 @@ icelus = {
       InputGroup: function (el, options) {
          return new $.InputGroup(el, options);
       },
-      ListContent: function(el, options) {
-         return new $.ListContent(el, options);
+      ListGroup: function(el, options) {
+         return new $.ListGroup(el, options);
       },
       NavBar: function (el, options) {
          return new $.NavBar(el, options);
       },
       Select: function (el, options) {
          return new $.Select(el, options);
+      },
+      Tab: function(el, options) {
+         return new $.Tab(el, options);
       }
    }
 };

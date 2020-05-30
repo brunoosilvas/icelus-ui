@@ -11,11 +11,11 @@ module.exports = {
       './resource/js/ui-badge.js',
       './resource/js/ui-button.js',
       './resource/js/ui-input-group.js',
-      './resource/js/ui-list-content.js',
+      './resource/js/ui-list-group.js',
       './resource/js/ui-navbar.js',
       './resource/js/ui-select.js',
+      './resource/js/ui-tab.js',
       './resource/js/ui.js',
-
 
       './node_modules/bootstrap/dist/js/bootstrap.js',
       './node_modules/popper.js/dist/popper.js',
