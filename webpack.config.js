@@ -15,6 +15,8 @@ module.exports = {
       './resource/js/ui-navbar.js',
       './resource/js/ui-select.js',
       './resource/js/ui-tab.js',
+      './resource/js/ui-icon-button.js',
+      './resource/js/ui-upload.js',
       './resource/js/ui.js',
 
       './node_modules/bootstrap/dist/js/bootstrap.js',
@@ -69,7 +71,7 @@ module.exports = {
       })
    ],
    output: {
-      path: path.resolve(__dirname, '..', 'icelus-content/public/resources/static/_plugin/icelus-ui/js'),
+      path: path.resolve(__dirname, '..', 'icelus-content/public/resource/static/_plugin/icelus-ui/js'),
       filename: 'icelus-ui.min.js'
    }
 };

@@ -18,8 +18,14 @@ icelus = {
       Select: function (el, options) {
          return new $.Select(el, options);
       },
-      Tab: function(el, options) {
+      Tab: function (el, options) {
          return new $.Tab(el, options);
+      },
+      IconButton: function (el, options) {
+         return new $.IconButton(el, options);
+      },
+      Upload: function (el, options) {
+         return new $.Upload(el, options);
       }
    }
 };
