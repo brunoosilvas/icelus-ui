@@ -3,6 +3,7 @@ $.Upload = function (el, options) {
 
     var defaults = {
         data: {},
+        size: 0,
         onSelect: function () { },
         onUpload: function () { }
     };
@@ -29,7 +30,7 @@ $.Upload = function (el, options) {
                         <label class="custom-file-label" for="file" data-browse="Procurar">Selecione...</label>
                      </div>
                   </div>
-                  <div class="form-group col-12">
+                  <div class="form-group col-12 mt-1">
                      <button class="btn btn-primary btn-sm" type="button">
                         <span class="mr-2"><i class="fa fa-upload"></i></span>
                         <span>Uplaod</span>
@@ -50,19 +51,13 @@ $.Upload = function (el, options) {
 
                         $('input[name=size]', el).val(files.length);
 
-                        /*let data = new FormData();
-                        for (let i = 0; i < files.length; i++) {
-                            let file = files[i]
-                            data.append(`files${i}`, file);
-                        }*/
-
                         let data = new FormData($('form', el)[0]);
-                        console.log(data);
 
                         let display = `${files.length} ${files.length > 1 ? 'arquivos selecionados' : 'arquivo selecionado'}`;
                         $('.custom-file label', el).text(display);
 
                         plugin.data = data;
+                        plugin.size = files.length;
                         plugin.settings.onSelect.call(el, plugin.val());
                     }
                 });
@@ -70,7 +65,6 @@ $.Upload = function (el, options) {
 
             if ($.isFunction(plugin.settings.onUpload)) {
                 $('button', el).on('click', function () {
-                    plugin.progressStart();
                     plugin.settings.onUpload.call(el, plugin.val());
                 });
             }
@@ -96,6 +90,8 @@ $.Upload = function (el, options) {
 
     plugin.progressStop = function () {
         $('.progress', el).addClass('d-none');
+        $('.custom-file label', el).text('Selecione...');
+        plugin.data = {};
     }
 
     createWidget();
