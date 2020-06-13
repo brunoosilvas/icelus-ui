@@ -35,6 +35,7 @@ $.Upload = function (el, options) {
                         <span class="mr-2"><i class="fa fa-upload"></i></span>
                         <span>Uplaod</span>
                      </button>
+                     <small class="ml-2 text-muted"></small>
                   </div>
                 </div>
                 <div class="progress d-none">
@@ -49,6 +50,7 @@ $.Upload = function (el, options) {
 
                     if (files && files.length > 0) {
 
+                        $('input[name=path]', el).val($(el).data('path'));
                         $('input[name=size]', el).val(files.length);
 
                         let data = new FormData($('form', el)[0]);
@@ -90,8 +92,13 @@ $.Upload = function (el, options) {
 
     plugin.progressStop = function () {
         $('.progress', el).addClass('d-none');
+        $('small', el).addClass('d-none');
         $('.custom-file label', el).text('Selecione...');
         plugin.data = {};
+    }
+
+    plugin.status = function(text) {
+      $('small', el).text(text);
     }
 
     createWidget();
