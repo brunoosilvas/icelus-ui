@@ -1,0 +1,119 @@
+.navbar {
+   background-color: map-get($theme, sidebar-bg);
+}
+.navbar-link {
+   margin-left: rem(3);
+}
+
+.navbar-bars {
+   transition: 0.2s all;
+   margin-left: rem(5);
+   @include font-size($font-size);
+}
+
+.navbar .navbar-bars:hover {
+   opacity: 0.7;
+}
+
+.dropdown-logged {
+   margin-left: auto;
+}
+
+.dropdown-logged-toggle:before {
+   margin: rem(6) 0 0 rem(8);
+   float: right;
+   font-family: $font-awesome;
+   @include font-size($font-size);
+   content: "\f175";
+}
+
+.dropdown-logged-menu {
+   top: rem(34);
+}
+
+.dropdown-logged-item {
+   @include font-size($font-size);
+
+   .fa {
+      transition: 0.5s all;
+      padding-right: rem(10);
+      width: rem(22);
+   }
+}
+
+.dropdown-link:hover {
+   text-decoration: none;
+}
+
+.dropdown-user {
+   display: block;
+   margin: rem(5) rem(8) 0 0;
+   font-weight: 600;
+   @include font-size($font-size);
+}
+
+.dropdown-avatar {
+   height: $sm-avatar;
+   width: $sm-avatar;
+   border-radius: 50%;
+}
+
+.dropdown-menu-arrow {
+   top: rem(-25);
+   left: 50%;
+   position: relative;
+}
+
+.dropdown-menu-arrow:before,
+.dropdown-menu-arrow:after {
+   content: "";
+   position: absolute;
+   display: block;
+   border-width: rem(6) rem(7);
+   border-style: solid;
+   border-color: transparent;
+   z-index: 1001;
+}
+
+.dropdown-menu-arrow:before,
+.dropdown-menu-arrow:after,
+.dropdown-menu-arrow {
+   width: 0;
+   height: 0;
+}
+
+.dropdown-menu-arrow:after {
+   bottom: rem(-18);
+   right: rem(-74);
+}
+
+.dropdown-logged .dropdown-link {
+   color: map-get($theme, dropdown-link);
+}
+
+.dropdown-menu {
+   background-color: map-get($theme, dropdown-bg);
+}
+
+.dropdown-menu .dropdown-logged-item {
+   color: map-get($theme, dropdown-link);
+}
+
+.dropdown-menu .dropdown-logged-item:hover {
+   background-color: map-get($theme, dropdown-item-bg);
+   color: map-get($theme, dropdown-link);
+}
+
+.dropdown-menu .dropdown-menu-arrow:after {
+   border-bottom-color: map-get($theme, dropdown-bg);
+}
+
+.dropdown-logged .dropdown-logged-toggle:before,
+.dropdown-menu .dropdown-logged-item .fa {
+   opacity: 0.3;
+}
+
+.dropdown-menu-right {
+   right: 0;
+   left: auto;
+}

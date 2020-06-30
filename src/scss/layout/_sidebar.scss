@@ -1,0 +1,68 @@
+.sidebar {
+   margin-top: $sm-top;
+   min-height: calc(100vh - #{$sm-top});
+   margin-left: -$sm-sidebar;
+   transition: margin 0.15s ease-out;
+   @include media-breakpoint-up("md") {
+      margin-left: 0;
+   }
+   background-color: map-get($theme, sidebar-bg);
+}
+
+.sidebar-toggle .sidebar {
+   margin-left: 0;
+   @include media-breakpoint-up("md") {
+      margin-left: -$sm-sidebar;
+   }
+}
+
+.sidebar-toggle .botbar {
+   left: 0;
+}
+
+.sidebar-menu {
+   width: $sm-sidebar;
+}
+
+.sidebar .list {
+   color: map-get($theme, list-color);
+}
+
+.sidebar .list-link {
+   color: map-get($theme, list-link);
+}
+
+.sidebar .list-hidden {
+   border-left: rem(1) solid map-get($theme, list-border);
+}
+
+.sidebar .link-current,
+.sidebar .list-link:hover {
+   background-color: map-get($theme, list-link-bg);
+}
+
+.navbar .navbar-link {
+   color: map-get($theme, navbar-link);
+}
+
+.navbar .navbar-bars {
+   color: map-get($theme, navbar-link);
+}
+
+.sidebar .ps__rail-y.ps--clicking .ps__thumb-y,
+.sidebar .ps__rail-y:focus .ps__thumb-y,
+.sidebar .ps__rail-y:hover .ps__thumb-y,
+.sidebar .ps__thumb-y {
+   background-color: map-get($theme, scrollbar-bg);
+}
+
+.sidebar .link-arrow:before,
+.sidebar .list-link .fa,
+.navbar .navbar-bars {
+   opacity: 0.3;
+}
+
+.sidebar .link-arrow.active:before,
+.sidebar .list-link:hover .fa {
+   opacity: 1;
+}

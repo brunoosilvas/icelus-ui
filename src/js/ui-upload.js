@@ -30,7 +30,7 @@ $.Upload = function (el, options) {
                         <label class="custom-file-label" for="file" data-browse="Procurar">Selecione...</label>
                      </div>
                   </div>
-                  <div class="form-group col-12 mt-1">
+                  <div class="form-group col-12 mt-1 mb-0">
                      <button class="btn btn-primary btn-sm" type="button">
                         <span class="mr-2"><i class="fa fa-upload"></i></span>
                         <span>Uplaod</span>
@@ -38,10 +38,11 @@ $.Upload = function (el, options) {
                      <small class="ml-2 text-muted"></small>
                   </div>
                 </div>
-                <div class="progress d-none">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-            </form>`;
+            </form>
+            <div class="progress d-none mt-1 mb-1">
+               <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>`;
+
             $(el).html(html);
 
             if ($.isFunction(plugin.settings.onSelect)) {
